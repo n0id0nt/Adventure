@@ -1,0 +1,228 @@
+{
+  "world": [
+    {
+      "name": "Forest",
+      "description": "A lush green Forest full of tall trees",
+      "components": [
+        {
+          "type": "location",
+          "extra": {
+            "n": "Plains",
+            "sw": "Deep Forest"
+          }
+        },
+        { "type": "inventory" }
+      ],
+      "children": [
+        {
+          "name": "Stick",
+          "description": "This stick has a sharp end it might be good at hitting things",
+          "components": [
+            { "type": "moveable" },
+            { "type": "item" },
+            {
+              "type": "damage",
+              "extra": {
+                "damage": 5
+              }
+            },
+            { "type": "flammable" },
+            { "type": "talk" }
+          ]
+        },
+        {
+          "name": "Tree Hollow",
+          "description": "looking at the tallest tree you see a very suspicious hole on it",
+          "children": [
+            {
+              "name": "note",
+              "description": "This is the world of zorkish and adventure awaits",
+              "components": [
+                { "type": "moveable" },
+                { "type": "item" }
+              ]
+            }
+          ],
+          "components": [
+            { "type": "inventory" }
+          ]
+        },
+        {
+          "name": "Player",
+          "description": "This is you",
+          "components": [
+            { "type": "look" },
+            { "type": "attack" },
+            { "type": "moveable" },
+            { "type": "inventory" },
+            {
+              "type": "health",
+              "extra": {
+                "hp": 10
+              }
+            },
+            { "type": "attack" }
+          ],
+          "children": [
+            {
+              "name": "Sword",
+              "description": "A sharp sword for hitting things",
+              "components": [
+                { "type": "moveable" },
+                { "type": "item" },
+                {
+                  "type": "damage",
+                  "extra": {
+                    "damage": 10
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Plains",
+      "description": "A vast plain with gentle rolling hills and green grass",
+      "components": [
+        {
+          "type": "location",
+          "extra": {
+            "s": "Forest",
+            "nw": "Rocky Hills",
+            "n": "Swamp"
+          }
+        },
+        { "type": "inventory" }
+      ],
+      "children": [
+        {
+          "name": "Rock",
+          "description": "A heavy grey rock",
+          "components": [
+            { "type": "moveable" },
+            { "type": "item" },
+            {
+              "type": "damage",
+              "extra": {
+                "damage": 4
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Swamp",
+      "description": "A murky swamp with slime green water and glowing eyes staring at you from a distance",
+      "components": [
+        {
+          "type": "location",
+          "extra": { "s": "Plains" }
+        },
+        { "type": "inventory" }
+      ],
+      "children": [
+        {
+          "name": "Swamp monster",
+          "description": "A Slimy creature that lives in the swamp",
+          "components": [
+            { "type": "attack" },
+            { "type": "moveable" },
+            { "type": "inventory" },
+            {
+              "type": "health",
+              "extra": {
+                "hp": 30
+              }
+            },
+            { "type": "attack" }
+          ],
+          "children": [
+            {
+              "name": "Swamp Sword",
+              "description": "A sharp sword for hitting things with some water dripping down",
+              "components": [
+                { "type": "moveable" },
+                { "type": "item" },
+                {
+                  "type": "damage",
+                  "extra": {
+                    "damage": 6
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Deep Forest",
+      "description": "A dark green Forest full of looming trees so tall and dense not a sliver of sunlight reaches the ground",
+      "components": [
+        {
+          "type": "location",
+          "extra": {
+            "e": "Forest",
+            "sw": "Ghost Ridge",
+            "n": "Forest Dungeon"
+          }
+        },
+        { "type": "inventory" }
+      ]
+    },
+    {
+      "name": "Ghost Ridge",
+      "description": "Deep, deep into the forest white lifeless trees loom over you, hazy figures appearing and diserperaring from the corners of your eyes, taunting you. Whispers telling you to go deeper",
+      "components": [
+        {
+          "type": "location",
+          "extra": { "ne": "Deep Forest" }
+        },
+        { "type": "inventory" }
+      ]
+    },
+    {
+      "name": "Rocky Hills",
+      "description": "Small jiggered hills with sharp rocks pointing in all directions, laying at the base wall of a mountain expanding to the sky",
+      "components": [
+        {
+          "type": "location",
+          "extra": {
+            "se": "Plains",
+            "w": "Death Mountains"
+          }
+        },
+        { "type": "inventory" }
+      ]
+    },
+    {
+      "name": "Death Mountains",
+      "description": "A mountain range extending into the sky rising up so tall no life can survive here",
+      "components": [
+        {
+          "type": "location",
+          "extra": { "e": "Rocky Hills" }
+        },
+        { "type": "inventory" }
+      ]
+    },
+    {
+      "name": "Forest Dungeon",
+      "description": "An old ancient temple overrun by monsters that stretches so deep into the ground that no sun light reaches the bottom, but what is this glowing at the booton, an escape?",
+      "components": [
+        {
+          "type": "location",
+          "extra": {
+            "n": "Death Mountains",
+            "s": "Deep Forest"
+          }
+        },
+        { "type": "inventory" }
+      ]
+    }
+  ]
+}
+
